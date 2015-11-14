@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.bank.entity.Bank" table="bank" lazy="false">
+		
+		<id name="bankId"  column="bankid">
+			<generator class="increment" />
+		</id>
+		
+		<property name="bankName">
+			<column name="bankName" />
+		</property>
+		<property name="banktype">
+			<column name="bankType" />
+		</property>
+		
+			<property name="location">
+			<column name="locatiomn" />
+		</property>
+		
+	<!-- 
+	 <many-to-one name="Address" class="com.junaid.Hibernate.Address"
+            column="user_id" unique="true" not-null="true"
+            cascade="all" />
+	
+	 -->
+	
+</class>
+</hibernate-mapping>
